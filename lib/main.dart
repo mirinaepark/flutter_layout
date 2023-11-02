@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/insta/insta_app.dart';
+import 'package:flutter_layout/button/button_etc.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: InstaApp(),
+      home: ButtonEtc(),
 
+      // InstaApp()
     );
   }
 }
