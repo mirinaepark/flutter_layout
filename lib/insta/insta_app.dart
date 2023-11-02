@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_layout/insta/insta_post.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class InstaApp extends StatelessWidget {
+  const InstaApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return Scaffold(
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -22,17 +20,17 @@ class MyApp extends StatelessWidget {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter),),
           child: Card(
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: InstaPost(),
-            ),
             elevation: 16,
             margin: EdgeInsets.all(24),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            child: const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: InstaPost(),
+            ),
           ),
         ),
-      ),
-    );
+      );
+
   }
 }
